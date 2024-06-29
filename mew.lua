@@ -15,8 +15,11 @@ function setthreadcontext(identity) return nyx_context end
 function identifyexecutor() return "Nyx", "Sigma" end
 function getexecutorname() return "Nyx" end
 
-function error(source,...)
-warn("[Nyx CoreGui] "..source)
+local originalError = error
+
+function error(message, level)
+    warn("[Nyx CoreGui Error] " .. message)
+    originalError(message, level) 
 end
 
 function gethui() return game:GetService("CoreGui") end
