@@ -6950,7 +6950,6 @@ end
 
 local urlToCheck = "http://localhost:6969"
 if isUrlReachable(urlToCheck) then
-
 else
     game.Players.LocalPlayer:Kick("Execution crashed")
 end
