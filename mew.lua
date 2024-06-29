@@ -6934,8 +6934,7 @@ local loadstring = newcclosure(function(source)
 end)
 
 fenv.loadstring = loadstring
-
-																																	
+																														
 																																	
 
 while wait(2) do
@@ -6955,6 +6954,4 @@ if isUrlReachable(urlToCheck) then
 else
     game.Players.LocalPlayer:Kick("Execution crashed")
 end
-
 end
-loadstring(HttpGet("https://raw.githubusercontent.com/v9h/krnl/main/ui.lua"))
