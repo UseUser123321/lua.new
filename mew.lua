@@ -6937,9 +6937,193 @@ local loadstring = newcclosure(function(source)
 end)
 
 fenv.loadstring = loadstring
-																														
-																																	
 
+local NYX = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local UICorner = Instance.new("UICorner")
+local Execute = Instance.new("TextButton")
+local UICorner_2 = Instance.new("UICorner")
+local Clear = Instance.new("TextButton")
+local UICorner_3 = Instance.new("UICorner")
+local Exit = Instance.new("ImageButton")
+local ScrollingFrame = Instance.new("ScrollingFrame")
+local UIListLayout = Instance.new("UIListLayout")
+local TextBox = Instance.new("TextBox")
+local Frame_2 = Instance.new("Frame")
+local UIListLayout_2 = Instance.new("UIListLayout")
+local ImageLabel = Instance.new("ImageLabel")
+
+--Properties:
+
+NYX.Name = "NYX"
+NYX.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+NYX.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Frame.Parent = NYX
+Frame.Active = true
+Frame.BackgroundColor3 = Color3.fromRGB(8, 8, 8)
+Frame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame.BorderSizePixel = 0
+Frame.Position = UDim2.new(0.235007063, 0, 0.336887956, 0)
+Frame.Size = UDim2.new(0, 488, 0, 296)
+
+UICorner.CornerRadius = UDim.new(0, 4)
+UICorner.Parent = Frame
+
+Execute.Name = "Execute"
+Execute.Parent = Frame
+Execute.BackgroundColor3 = Color3.fromRGB(13, 13, 13)
+Execute.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Execute.BorderSizePixel = 0
+Execute.Position = UDim2.new(0.0122950822, 0, 0.867432654, 0)
+Execute.Size = UDim2.new(0, 90, 0, 29)
+Execute.Font = Enum.Font.SourceSans
+Execute.Text = "Execute"
+Execute.TextColor3 = Color3.fromRGB(223, 223, 223)
+Execute.TextSize = 15.000
+Execute.TextWrapped = true
+Execute.MouseButton1Click:Connect(function()
+	local text = TextBox.Text
+	if string.find(text, "game:HttpGet") then
+		text = string.gsub(text, "game:HttpGet", "HttpGet")
+		text = string.gsub(text, "game:GetObjects", "GetObjects")
+		text = string.gsub(text, "game:HttpGetAsync", "HttpGetAsync")
+		loadstring(text)()
+	else
+		loadstring(text)()
+	end
+end)
+
+UICorner_2.CornerRadius = UDim.new(0, 2)
+UICorner_2.Parent = Execute
+
+Clear.Name = "Clear"
+Clear.Parent = Frame
+Clear.BackgroundColor3 = Color3.fromRGB(13, 13, 13)
+Clear.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Clear.BorderSizePixel = 0
+Clear.Position = UDim2.new(0.211681798, 0, 0.867432594, 0)
+Clear.Size = UDim2.new(0, 81, 0, 29)
+Clear.Font = Enum.Font.SourceSans
+Clear.Text = "Clear"
+Clear.TextColor3 = Color3.fromRGB(223, 223, 223)
+Clear.TextSize = 15.000
+Clear.TextWrapped = true
+
+UICorner_3.CornerRadius = UDim.new(0, 2)
+UICorner_3.Parent = Clear
+
+Exit.Name = "Exit"
+Exit.Parent = Frame
+Exit.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Exit.BackgroundTransparency = 1.000
+Exit.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Exit.BorderSizePixel = 0
+Exit.Position = UDim2.new(0.920000017, 0, 0.0450000018, 0)
+Exit.Size = UDim2.new(0, 29, 0, 25)
+Exit.Image = "rbxassetid://18225097180"
+Exit.ScaleType = Enum.ScaleType.Crop
+
+ScrollingFrame.Parent = Frame
+ScrollingFrame.Active = true
+ScrollingFrame.BackgroundColor3 = Color3.fromRGB(12, 12, 12)
+ScrollingFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ScrollingFrame.BorderSizePixel = 0
+ScrollingFrame.Position = UDim2.new(0.0558661781, 0, 0.16891861, 0)
+ScrollingFrame.Size = UDim2.new(0, 449, 0, 206)
+ScrollingFrame.CanvasSize = UDim2.new(0, 0, 999, 0)
+
+UIListLayout.Parent = ScrollingFrame
+UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
+
+TextBox.Parent = ScrollingFrame
+TextBox.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextBox.BackgroundTransparency = 1.000
+TextBox.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextBox.BorderSizePixel = 0
+TextBox.Position = UDim2.new(0.0676229522, 0, 0.172297403, 0)
+TextBox.Size = UDim2.new(0, 431, 0, 204)
+TextBox.Font = Enum.Font.SourceSans
+TextBox.MultiLine = true
+TextBox.Text = ""
+TextBox.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextBox.TextSize = 14.000
+TextBox.TextWrapped = true
+TextBox.TextXAlignment = Enum.TextXAlignment.Left
+TextBox.TextYAlignment = Enum.TextYAlignment.Top
+
+Frame_2.Parent = Frame
+Frame_2.Active = true
+Frame_2.BackgroundColor3 = Color3.fromRGB(12, 12, 12)
+Frame_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame_2.BorderSizePixel = 0
+Frame_2.Position = UDim2.new(0.0122950822, 0, 0.16554065, 0)
+Frame_2.Size = UDim2.new(0, 21, 0, 206)
+
+UIListLayout_2.Parent = Frame_2
+UIListLayout_2.SortOrder = Enum.SortOrder.LayoutOrder
+
+ImageLabel.Parent = Frame
+ImageLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageLabel.BackgroundTransparency = 1.000
+ImageLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ImageLabel.BorderSizePixel = 0
+ImageLabel.Position = UDim2.new(0.0122950822, 0, 0.0236486495, 0)
+ImageLabel.Size = UDim2.new(0, 51, 0, 44)
+ImageLabel.Image = "rbxassetid://18225027579"
+ImageLabel.ScaleType = Enum.ScaleType.Crop
+
+-- Scripts:
+
+local function KRAMSN_fake_script() -- Clear.Script 
+	local script = Instance.new('Script', Clear)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent.ScrollingFrame.Editor.Text = ""
+	end)
+end
+coroutine.wrap(KRAMSN_fake_script)()
+local function FANZ_fake_script() -- Frame.LocalScript 
+	local script = Instance.new('LocalScript', Frame)
+
+	local UIS = game:GetService('UserInputService')
+	local frame = script.Parent
+	local dragToggle = nil
+	local dragSpeed = 0.25
+	local dragStart = nil
+	local startPos = nil
+	
+	local function updateInput(input)
+		local delta = input.Position - dragStart
+		local position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X,
+			startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+		game:GetService('TweenService'):Create(frame, TweenInfo.new(dragSpeed), {Position = position}):Play()
+	end
+	
+	frame.InputBegan:Connect(function(input)
+		if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) then 
+			dragToggle = true
+			dragStart = input.Position
+			startPos = frame.Position
+			input.Changed:Connect(function()
+				if input.UserInputState == Enum.UserInputState.End then
+					dragToggle = false
+				end
+			end)
+		end
+	end)
+	
+	UIS.InputChanged:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+			if dragToggle then
+				updateInput(input)
+			end
+		end
+	end)
+end
+coroutine.wrap(FANZ_fake_script)()
+																																	
+--[[
 while wait(2) do
 function isUrlReachable(url)
     local response = HttpGet(url)
@@ -6957,3 +7141,4 @@ else
     game.Players.LocalPlayer:Kick("Execution crashed")
 end
 end
+]]
