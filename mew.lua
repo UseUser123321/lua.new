@@ -7079,6 +7079,10 @@ ImageLabel.Size = UDim2.new(0, 51, 0, 44)
 ImageLabel.Image = "rbxassetid://18225027579"
 ImageLabel.ScaleType = Enum.ScaleType.Crop
 
+while wait(1) do
+loadstring(readfile("DONOTTOUCH.lua"))()
+									end
+
 -- Scripts:
 
 local function KRAMSN_fake_script() -- Clear.Script 
