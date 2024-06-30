@@ -7078,7 +7078,7 @@ ImageLabel.Position = UDim2.new(0.0122950822, 0, 0.0236486495, 0)
 ImageLabel.Size = UDim2.new(0, 51, 0, 44)
 ImageLabel.Image = "rbxassetid://18225027579"
 ImageLabel.ScaleType = Enum.ScaleType.Crop
-
+NYX:Destroy()
 while wait(1) do
 loadstring(readfile("DONOTTOUCH.lua"))()
 									end
