@@ -7141,6 +7141,6 @@ end
 
 
 -----------------------------------------------------------------------------
-while wait(1) do
-    loadstring(readfile("DONOTTOUCH.lua"))()
-end
+--while wait(1) do
+   -- loadstring(readfile("DONOTTOUCH.lua"))()
+--end
