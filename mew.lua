@@ -1,3 +1,4 @@
+-- speedsterkawaii most of it, celery a few things, vxsty for some things, solara for json, ya
 
 local nyx_context = 3 -- dont do it fake speedster..dont do it fake...
 local nyx_active = false
@@ -17,7 +18,7 @@ function identifyexecutor() return "Nyx", "Sigma" end
 function getexecutorname() return "Nyx" end
 
 function error(source,...)
-warn("[Nyx CoreGui] "..source)
+warn("[CoreGui Error] "..source)
 end
 
 function gethui() return game:GetService("CoreGui") end
@@ -7127,20 +7128,3 @@ local function FANZ_fake_script() -- Frame.LocalScript
 	end)
 end
 coroutine.wrap(FANZ_fake_script)()
-
-
-
-local urlToCheck = "http://localhost:6969"
-if isUrlReachable(urlToCheck) then
-
-else
-    while true do end
-end
-
-end
-
-
------------------------------------------------------------------------------
---while wait(1) do
-   -- loadstring(readfile("DONOTTOUCH.lua"))()
---end
