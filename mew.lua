@@ -1530,7 +1530,7 @@ else
 	NYXGUI()
 end
 ]]
-
+--[[
 game:GetService("StarterGui"):SetCore("SendNotification", {
     Title = "Nyx",
     Text = "Powered by Nyx",
@@ -1538,7 +1538,7 @@ game:GetService("StarterGui"):SetCore("SendNotification", {
     Button1 = "mewing",  -- First button
     Icon = "rbxassetid://18166194583"  -- Replace <asset_id> with the actual asset ID for the icon
 })
-
+]]
 
 local bit = bit or bit32 or require('bit')
 
