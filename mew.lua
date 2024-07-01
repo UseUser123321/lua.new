@@ -17,10 +17,6 @@ function setthreadcontext(identity) return nyx_context end
 function identifyexecutor() return "Nyx", "Sigma" end
 function getexecutorname() return "Nyx" end
 
-function error(source,...)
-warn("[CoreGui Error] "..source)
-end
-
 function gethui() return game:GetService("CoreGui") end
 
 function isrbxactive() return nyx_active end
