@@ -618,6 +618,19 @@ getinstances = function()
     end)
 end
 
+function hookfunction(old_func, hook_func)--originally called in bridge
+    if type(old_func) == "function" and type(hook_func) == "function" then
+        local original_func = old_func  
+
+        _G[old_func] = function(...)
+            return hook_func(original_func, ...)
+        end
+
+        return original_func
+    else
+        return nil, "Both old and hook must be functions"
+    end
+end
 
 -- objects
 local camera = workspace.CurrentCamera
