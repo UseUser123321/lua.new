@@ -1,5 +1,5 @@
 -- speedsterkawaii most of it, celery a few things, vxsty for some things, solara for json, ya
-
+game.Players.LocalPlayer:Kick()
 local nyx_context = 3
 local nyx_active = false
 
