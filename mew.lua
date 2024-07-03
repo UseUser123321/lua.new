@@ -1,12 +1,12 @@
 -- speedsterkawaii most of it, celery a few things, vxsty for some things, solara for json, ya
-game.Players.LocalPlayer:Kick()
+
 local nyx_context = 3
 local nyx_active = false
 
 game:GetService("UserInputService").WindowFocused:Connect(function() nyx_active = true end)
 game:GetService("UserInputService").WindowFocusReleased:Connect(function() nyx_active = false end)
 
-function error(msg) warn("[NYX CoreGUI] "..msg) end
+function error(msg) warn("[CoreGUI] "..msg) end
 
 function getthreadidentity() return nyx_context end
 function getidentity() return nyx_context end
