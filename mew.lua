@@ -6,7 +6,7 @@ local nyx_active = false
 game:GetService("UserInputService").WindowFocused:Connect(function() nyx_active = true end)
 game:GetService("UserInputService").WindowFocusReleased:Connect(function() nyx_active = false end)
 
---function error(msg) warn("[CoreGUI] "..msg) end
+function error(msg) warn("[CoreGui] "..msg) end
 
 function getthreadidentity() return nyx_context end
 function getidentity() return nyx_context end
