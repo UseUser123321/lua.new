@@ -46,6 +46,8 @@ function GetObjects(assetid)
     return { game:GetService("InsertService"):LoadLocalAsset(assetid) }
 end
 
+function randomstring(length) local chars = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789' local randomString = '' for i = 1, length do local randomIndex = math.random(#chars) randomString = randomString .. chars:sub(randomIndex, randomIndex) end return randomString end
+
 
 function getmodules() local tabl = {} for i,v in next,getreg() do if type(v)=="table" then for n,c in next,v do if typeof(c) == "Instance" and (c:IsA("ModuleScript")) then table.insert(tabl, c) end end end end return tabl end
 function getloadedmodules() local returnable = {} for _,v in game:GetDescendants() do if v:IsA("ModuleScript") then returnable[#returnable + 1] = v end end return returnable end
