@@ -538,6 +538,33 @@ isreadonly = function(instance, property)
 	end
 end 
 
+setreadonly = function(tbl, bool)
+	local function gettype(obj)
+		if type(obj) == "userdata" then
+			return "Instance"
+		else
+			return tostring(type(obj))
+		end
+	end
+	if bool == true then
+		if gettype(tbl) == "table" then
+			local frozen = table.freeze(tbl)
+			return frozen
+		else
+			error("invalid argument #1 to 'setreadonly' (table expected, got " .. gettype(tbl) .. ")")
+		end
+	elseif bool == false then
+		if gettype(tbl) == "table" then
+			local cloned = table.clone(tbl)
+			return table.clone(cloned)
+		else
+			error("invalid argument #1 to 'setreadonly' (table expected, got " .. gettype(tbl) .. ")")
+		end
+	else
+		error("invalid argument #2 to 'setreadonly' (bool expected, got ".. bool ..")")
+	end
+end
+
 function isexecutorclosure(func)
     if iscclosure(func) then
         return debug.info(func, "n") == "" 
